@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Immagine 5</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Panzoom CSS (optional) -->
+    <style>
+        #panzoom {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        #panzoom img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="panzoom">
+        <img src="images/image5.jpg" alt="Image 5">
+    </div>
+
+    <!-- Panzoom JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+    <script>
+        const element = document.getElementById('panzoom');
+        const panzoom = Panzoom(element.querySelector('img'), {
+            maxScale: 5
+        });
+        element.addEventListener('wheel', panzoom.zoomWithWheel);
+    </script>
+    <a href="index.html" class="back-button">← Home</a>
+</body>
+</html>

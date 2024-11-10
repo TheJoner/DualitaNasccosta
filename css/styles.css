@@ -1,0 +1,139 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #9c94ce;
+    color: #333;
+    line-height: 1.6;
+    align-items: center;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2.5em;
+    color: #241024;
+}
+
+/* Grid container for buttons */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Style for buttons */
+.grid button {
+    background-color: #fff;
+    border: 2px solid #007BFF;
+    color: #007BFF;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button hover effect */
+.grid button::after {
+    content: '';
+    background: #007BFF;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.grid button:hover {
+    color: #8a2727;
+}
+
+.grid button:hover::after {
+    left: 0;
+}
+
+/* Panorama container */
+#panorama {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Fullscreen button styles for Pannellum */
+.pnlm-fullscreen-button {
+    background-color: rgba(0, 123, 255, 0.7) !important;
+}
+
+.pnlm-fullscreen-button:hover {
+    background-color: rgba(0, 123, 255, 1) !important;
+}
+
+/* Zoom controls for Pannellum */
+.pnlm-zoom-controls button {
+    background-color: rgba(0, 123, 255, 0.7) !important;
+}
+
+.pnlm-zoom-controls button:hover {
+    background-color: rgba(0, 123, 255, 1) !important;
+}
+
+/* Back button */
+.back-button {
+    position: fixed;
+    top: 90%;
+    left: 20px;
+    background-color: #fff;
+    border: 2px solid #007BFF;
+    color: #007BFF;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.back-button::after {
+    content: '';
+    background: #007BFF;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.back-button:hover {
+    color: #fff;
+}
+
+.back-button:hover::after {
+    left: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .grid button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
